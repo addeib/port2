@@ -1,0 +1,38 @@
+.col1, .cols {float:left}
+.col1 {padding-left:37px;width:287px}
+.col2 {float:left}
+.col2 {padding-center:37px;width:287px}
+.col3 {float:left}
+.col3 {padding-right:37px;width:287px}
+.col4 {float:center}
+.col4 {padding-right:7px;width:100%}
+.col5 {float:left}
+.col5 {padding-left:20px;width:100%}
+.col6 {float:left}
+.col6 {padding-left:27px;width:170px}
+.col7 {float:left}
+.col7 {padding-left:35px;width:675px}
+
+.col8 {float:left}
+.col8 {padding-left:115px;width:375px}
+
+.col9 {float:left}
+.col9 {padding-left:115px;width:775px}
+
+.col10 {float:right}
+.col10 {padding-right:115px;width:375px}
+
+.cols {width:563px}
+/* index.html */
+/* index-1.html */
+/* index-2.html */
+/* index-3.html */
+#page4 .cols {width:155px}
+#page4 .marg_right1 {margin-right:41px}
+/* index-4.html */
+#page5 .cols {width:256px}
+#page5 .pad_left1 {padding-left:40px}
+/* index-5.html */
+#page6 .cols {width:68px}
+#page6 .col2 {width:560px}
+/* index-6.html */
