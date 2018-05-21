@@ -1,78 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Payment</title>
+  <title>Safety</title>
 <meta charset="utf-8">
-
- <script language="JavaScript" src="gen_validatorv31.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="pay_style.css" type="text/css">
-<link rel="stylesheet" href="css_copy/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-
-
-
 <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
-<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>  
 <script type="text/javascript" src="js/Cabin_400.font.js"></script>
-<script type="text/javascript" src="js/tabs.js"></script>
+<script type="text/javascript" src="js/tabs.js"></script> 
 <script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
 <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript" src="js/atooltip.jquery.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-
-<script type="text/javascript">
-
-
-<!--
-function confirmation() {
-	var answer = confirm("Confirm Log Out?")
-	if (answer){
-		alert("Log Out Confirmed")
-		window.location = "index.html";
-	}
-	else{
-		alert("Log Out Cancelled")
-	}
-}
-//-->
-</script>
-
-<script type="text/javascript">
-<?php
-error_reporting(0);
-function buy(){
-	echo "<script type='text/javascript'>
-	
-	if (confirm(\"Are you sure to buy it?\")){
-		alert(\"Please print your receipt\")
-		window.location = \"payment_receipt.php\";
-	}
-	else{
-		alert(\"Cancelled\")
-	}
-	
- </script>"; 
-	
-}
-?>
-</script>
-
-
-<style type="text/css">
-.putihbesar {
-	color:#FFF;
-	font-weight: bold;
-	font-size: 18px;
-}
-.merah {
-	color:#F00;
-	font-weight: bold;
-}
-</style>
-
 <!--[if lt IE 9]>
 <script type="text/javascript" src="js/html5.js"></script>
 <style type="text/css">
@@ -84,246 +26,164 @@ function buy(){
 		<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 	</div>
 <![endif]-->
-<script type="text/javascript" language="JavaScript1.2" src="stm31.js"></script>
-<script type="text/javascript" language="JavaScript1.2" src="stm31.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<body>
-<body id="page6">
+<body id="page5">
 <div class="main">
 <!--header -->
 	<header>
 		<div class="wrapper">
-		  <h1><a href="index.html" id="logo">Air lines</a></h1>
+			<h1><a href="index.html" id="logo">Air lines</a></h1>
+			<span id="slogan">Fast, Frequent &amp; Safe Flights</span>
 			<nav id="top_nav">
-			
+				<ul>
+					<li><a href="index.html" class="nav1">Home</a></li>
+					<li><a href="#" class="nav2">Sitemap</a></li>
+					<li><a href="Contacts.html" class="nav3">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
 		<nav>
 			<ul id="menu">
-				
-			  <li class="ending"><input type="button" onClick="confirmation()" value="Log Out"></li>
+				<li><a href="index.html"><span><span>About</span></span></a></li>
+				<li><a href="Offers.html"><span><span>Offers</span></span></a></li>
+				<li><a href="Book.html"><span><span>Book</span></span></a></li>
+				<li><a href="Services.html"><span><span>Services</span></span></a></li>
+				<li id="menu_active"><a href="Safety.html"><span><span>Safety</span></span></a></li>
+				<li class="end"><a href="Contacts.html"><span><span>Contacts</span></span></a></li>
 			</ul>
 		</nav>
 	</header>
 <!-- / header -->
 <!--content -->
-	<section id="content"> 
+	<section id="content">
 		<div class="wrapper pad1">
-		  
-		  <p><center>
-		    <img src="button_pay.png" width="531" height="89">
-		  </center><br>
-	      </p>
-		  
-              
-              
-            <div>  
-              <div id="contact">
-              
-             <article class="col6">
-			  <div class="box344">
-			    <ul >
-                <li ><a href="useraccountprofile.html" class="button2"><strong>My Profile</strong></a></li>
-                <li><a href="accountsetting.html" class="button2"><strong>Account Settings</strong></a></li>
-                <li><a href="useraccountbook.html" class="button2"><strong>Book a Flights</strong></a></li>
-                <li><a href="useraccountbookstatus.html" class="button2"><strong>Booking Status</strong></a></li>
-               </ul>
-		      </div>
-			</article>
-
-<form id="payment" name="payment" method="post" enctype="multipart/form-data" >
-<?php
-$butang=$_REQUEST['b'];
-if(isset($butang))	{
-              
-            echo buy();             
-}
-              
-?>       
-              
-              
-              
-              
-              <fieldset>
-			
-				<legend>Card details</legend>
-				
-				<ol>
-				
-					<li>
-					
-					  <fieldset>
-							
-							<legend>Card type<font color="#FF0000"> * </font> </legend>
-							
-							<ol>
-                            
-                            <li>
-									<input id="mastercard" name="cardtype" type="radio">
-									<label for="mastercard"><img src="images_pay/visa.jpg" width="86" height="47"></label>
-							  </li>
-								
-								<li>
-									<input id="visa" name="cardtype" type="radio" checked>
-									<label for="visa"><img src="images_pay/mastercard.jpg" width="86" height="47"></label>
-								</li>
-								
-						    <li>
-									<input id="amex" name="cardtype" type="radio">
-									<label for="amex"><img src="images_pay/CimbClicks.png" width="86" height="47"></label><a href="paymentoption.php" target="_new"><img border="0" src="images_pay/help.gif"></a> 
-							  </li>
-								
-								<li>
-								  <input id="debit" name="cardtype" type="radio">
-									<label for="debit"><img src="images_pay/mybank.jpg" width="86" height="47"></label>
-								</li>
-                                
-                                <li>
-								  <input id="debit" name="cardtype" type="radio">
-									<label for="debit"><img src="images_pay/ambank.jpg" width="86" height="47"></label>
-								</li>
-								
-                                 <li>
-								  <input id="debit" name="cardtype" type="radio">
-									<label for="debit"><img src="images_pay/bankislam.jpg" width="86" height="47"></label>
-								</li>
-                                
-                                
-							</ol>
-							
-					  </fieldset>
-						
-					</li>
-					
-					<li>
-						<label for="cardnumber">Card number<font color="#FF0000"> * </font></label>
-						<input id="cardnumber" name="cardnumber" required="" type="number">
-					</li>
-					
-					<li>
-						<label for="secure">CVV/CID<font color="#FF0000"> * </font></label>
-						<input id="secure" name="secure" required="" type="number">
-  <a href="cvv.php" target="_new"><img border="0" src="images_pay/help.gif"></a>                     
-					</li>
-					
-					<li>
-						<label for="namecard">Name on card<font color="#FF0000"> * </font></label>
-						<input id="namecard" name="namecard" placeholder="Exact name as on the card" required="" type="text">
-					</li>
-				
-				</ol>
-				
-			</fieldset>
-			
-            <br><br>
-
-		
-			<fieldset>
-			
-				<legend>Your details	on	the	ticket	</legend>
-				<ol>
-					
-				  <li>
-						<label for="name">Name</label>
-						<input id="name" name="name" placeholder="Bella Mason" required="" autofocus="" type="text" disabled>
-				  </li>
-					
-					<li>
-						<label for="email">Email</label>
-						<input id="email" name="email" placeholder="bellamason@gmail.com" required="" type="email" disabled>
-					</li>
-					
-					<li>
-						<label for="phone">Phone</label>
-						<input id="phone" name="phone" placeholder="0177654321" required="" type="tel" disabled>
-					</li>	
-                    
-                     <li>
-						<label for="name">Total Payment</label>
-						<input placeholder="RM500.00" required="" type="total" disabled>
-                        </li>
-                    
-                    	
-				</ol>
-				</fieldset>
-                
-                <br><br>
-                
-                <fieldset>
-                <legend>Additional Information</legend>
-				<ol>
-<li>
-						<label for="address">Billing Address<font color="#FF0000"> * </font></label>
-						<textarea id="address" name="address" rows="5" required=""></textarea>
-				  </li>
-					
-					<li>
-						<label for="postcode">Post code<font color="#FF0000"> * </font></label>
-						<input id="postcode" name="postcode" required="" type="text">
-					</li>
-					
-					<li>
-						<label for="state">State(Malaysia Only)<font color="#FF0000"> * </font></label>
-                        <input name="state" type="text" id="country" value="" required="">
-				      <label for="state"></label>
-					</li>
-				
-				</ol>
-			
-			</fieldset><br>
-			     <table width="541" align="center">
-			<tr align="center"> <td width="10">  <a href="Book3_2.html" class="button1 right"><strong>Back</strong></a> </td>
-			  <td align="center">
-            
-			    <button type="submit" name="b" class="button1">Buy It !</button>	
-		        <button type="reset" class="button1">Reset</button>
-		      </td> 
-			  </tr>
-            </table>
-            
-		</form></div></div>
-
-		  </div>
-			</section> 
-        
-<script language="JavaScript" type="text/javascript">
-      //You should create the validator only after the definition of the HTML form
-        var frmvalidator  = new Validator("payment");
-
-      frmvalidator.EnableMsgsTogether();
-   
-        frmvalidator.addValidation("namecard","alpha_s","Name on Card: Alphabet only");
-		 frmvalidator.addValidation("namecard","maxlen=30","Max length is 30");
-		 
-        frmvalidator.addValidation("add","req","Insert Your Address");
-        frmvalidator.addValidation("add","maxlen=20","Max length is 12");
-		
-        frmvalidator.addValidation("poscode","req","Insert Your Post Code/Zip");
-        frmvalidator.addValidation("poscode","maxlen=6","Max length is 6");
-		
-		frmvalidator.addValidation("state","req","Insert Your State");
-        frmvalidator.addValidation("state","maxlen=20","Max length is 20");
-        //frmvalidator.addValidation("country","dontselect=0","Please Choose the Country");
-        //frmvalidator.addValidation("taraf_kahwin","req");
-
-</script>
- <script type="text/javascript" src="Joe-MacDonald.co.uk%20%C2%BB%20The%20Online%20Portfolio%20of%20Joseph%20MacDonald_files/jquery-1.js"></script>
-<script type="text/javascript" src="Joe-MacDonald.co.uk%20%C2%BB%20The%20Online%20Portfolio%20of%20Joseph%20MacDonald_files/jquery.js"></script>
-<script type="text/javascript" src="Joe-MacDonald.co.uk%20%C2%BB%20The%20Online%20Portfolio%20of%20Joseph%20MacDonald_files/jquery_002.js"></script>
-<script type="text/javascript" src="Joe-MacDonald.co.uk%20%C2%BB%20The%20Online%20Portfolio%20of%20Joseph%20MacDonald_files/default.js"></script>
-	
-<!-- google analytics -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script src="Joe-MacDonald.co.uk%20%C2%BB%20The%20Online%20Portfolio%20of%20Joseph%20MacDonald_files/ga.js" type="text/javascript"></script><script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-11151599-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>       
-     
-               </strong></article>
-		  			</section>
+			<article class="col1">
+				<div class="box1">
+							<h2 class="top">Hot Offers of the Week</h2>
+							<div class="pad">
+								<strong>Birmingham</strong><br>
+								<ul class="pad_bot1 list1">
+									<li>
+										<span class="right color1">from GBP 143.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+								</ul>
+								<strong>London (LCY)</strong><br>
+								<ul class="pad_bot1 list1">
+									<li>
+										<span class="right color1">from GBP 176.-</span>
+										<a href="Book2.html">Geneva</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 109.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+								</ul>
+								<strong>London (LHR)</strong><br>
+								<ul class="pad_bot2 list1">
+									<li>
+										<span class="right color1">from GBP 100.-</span>
+										<a href="Book2.html">Geneva</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 112.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 88.-</span>
+										<a href="Book2.html">Basel</a>
+									</li>
+								</ul>
+								<strong>Manchester</strong><br>
+								<ul class="pad_bot2 list1">
+									<li>
+										<span class="right color1">from GBP 97.-</span>
+										<a href="Book2.html">Basel</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 103.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+								</ul>
+								<strong>Edinburgh</strong><br>
+								<ul class="pad_bot2 list1">
+									<li>
+										<span class="right color1">from GBP 165.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+								</ul>
+								<strong>Birmingham</strong><br>
+								<ul class="pad_bot1 list1">
+									<li>
+										<span class="right color1">from GBP 143.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+								</ul>
+								<strong>London (LCY)</strong><br>
+								<ul class="pad_bot1 list1">
+									<li>
+										<span class="right color1">from GBP 176.-</span>
+										<a href="Book2.html">Geneva</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 109.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+								</ul>
+								<strong>London (LHR)</strong><br>
+								<ul class="pad_bot2 list1">
+									<li>
+										<span class="right color1">from GBP 100.-</span>
+										<a href="Book2.html">Geneva</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 112.-</span>
+										<a href="Book2.html">Zurich</a>
+									</li>
+									<li>
+										<span class="right color1">from GBP 88.-</span>
+										<a href="Book2.html">Basel</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+					<article class="col2">
+						<h3 class="pad_top1">About Safety</h3>						
+						<div class="wrapper pad_bot2">
+							<figure class="left marg_right1"><img src="images/page5_img1.jpg" alt=""></figure>
+							<p><strong>At vero eos et accusamus et iusto</strong> odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis estet.</p>
+						</div>
+						<div class="wrapper pad_bot2">
+							<figure class="left marg_right1"><img src="images/page5_img2.jpg" alt=""></figure>
+							<p><strong>Nam libero tempore, cum soluta nobis</strong> est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+						</div>
+						<div class="wrapper">
+							<a href="#" class="button1 right"><strong>Read More</strong></a>
+						</div>
+						<h3>About Safety</h3>
+						<p>Et harum quidem rerum facilis estet expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+						<div class="wrapper">
+							<div class="cols">
+								<ul class="list1">
+									<li><a href="#">Temporibus autem quibusdam</a></li>
+									<li><a href="#">Debitis aut rerum necessitatibus saepe</a></li>
+									<li><a href="#">Eveniet ut et voluptates repudiandae</a></li>
+									<li><a href="#">Sint et molestiae non recusandae</a></li>
+								</ul>
+							</div>
+							<div class="cols pad_left1">
+								<ul class="list1">
+									<li><a href="#">Dtaque earum rerum hic tenetur</a></li>
+									<li><a href="#">Sapiente delectus ut aut reiciendis volupta</a></li>
+									<li><a href="#">Tibus maiores alias consequatur aut</a></li>
+									<li><a href="#">Perferendis doloribus asperiores repellat</a></li>
+								</ul>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
 			<!--content end-->
 			<!--footer -->
 			<footer>
@@ -336,12 +196,13 @@ pageTracker._trackPageview();
 						<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
 						<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
 					</ul>
-					<div class="links">© 2012 AeroWaves Airlines. All Rights Reserved. </div>
+					<div class="links">
+						Website template designed by <a href="http://www.templatemonster.com/" target="_blank" rel="nofollow">www.templatemonster.com</a><br>
+						3D Models provided by <a href="http://www.templates.com/product/3d-models/" target="_blank" rel="nofollow">www.templates.com</a></div>
 				</div>
 			</footer>
 			<!--footer end-->
 		</div>
 <script type="text/javascript"> Cufon.now(); </script>
 </body>
-</div>
 </html>
